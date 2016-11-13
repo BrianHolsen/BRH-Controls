@@ -173,6 +173,10 @@ namespace BRH.Winform.Controls
         {
             var totalWidth = this.ClientRectangle.Width;
             var totalHeight = this.ClientRectangle.Height;
+            var needMinWidth = this._BorderWidth * 2 + this._ColumnCount * 1 + (this._ColumnCount - 1) * this._GridLineWidth;
+            var needMinHeight = this._BorderWidth * 2 + this._RowCount * 1 + (this._RowCount - 1) * this._GridLineWidth;
+
+            this.MinimumSize = new Size(needMinWidth, needMinHeight);
 
             #region calc cell width & height
             //calc cell width
@@ -283,6 +287,11 @@ namespace BRH.Winform.Controls
         {
             this.RedrawAll();
             base.OnPaint(e);
+        }
+        protected override void OnResize(EventArgs e)
+        {
+            this.Invalidate();
+            base.OnResize(e);
         }
         #endregion
     }
