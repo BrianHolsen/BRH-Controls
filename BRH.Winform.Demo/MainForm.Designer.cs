@@ -28,11 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gridDisplay1 = new BRH.Winform.Controls.GridDisplay();
+            this.SuspendLayout();
+            // 
+            // gridDisplay1
+            // 
+            this.gridDisplay1.BorderColor = System.Drawing.Color.Maroon;
+            this.gridDisplay1.BorderWidth = 5;
+            this.gridDisplay1.ColumnCount = 20;
+            this.gridDisplay1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridDisplay1.GridLineColor = System.Drawing.Color.Black;
+            this.gridDisplay1.GridLineWidth = 2;
+            this.gridDisplay1.Location = new System.Drawing.Point(0, 0);
+            this.gridDisplay1.MinimumSize = new System.Drawing.Size(68, 68);
+            this.gridDisplay1.Name = "gridDisplay1";
+            this.gridDisplay1.RowCount = 20;
+            this.gridDisplay1.Size = new System.Drawing.Size(719, 678);
+            this.gridDisplay1.TabIndex = 0;
+            this.gridDisplay1.UniformCell = true;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(719, 678);
+            this.Controls.Add(this.gridDisplay1);
+            this.Name = "MainForm";
             this.Text = "MainForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Controls.GridDisplay gridDisplay1;
     }
 }
