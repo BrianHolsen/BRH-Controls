@@ -42,10 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GridDisplay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GridDisplay.Designer.cs">
-      <DependentUpon>GridDisplay.cs</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
